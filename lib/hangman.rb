@@ -12,6 +12,7 @@ loop do
   word = alphabet.sample
   break if (word.length > 4) && (word.length < 13)
 end
+word.downcase!
 word
 end
 
@@ -30,6 +31,8 @@ def guess_letter
 
   puts "Give me a letter for your guess!"
   guess = gets.chomp
+  guess.downcase!
+  guess
 
 end
 
